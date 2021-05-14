@@ -1,3 +1,4 @@
+
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 
@@ -13,15 +14,9 @@ function myFunction() {
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
-  }
-  
-  $(document).on('click','.navbar-collapse.in',function(e) {
-    if( $(e.target).is('a:not(".dropdown-toggle")') ) {
-        $(this).collapse('hide');
-    }
-});
+  } 
 }
-$( ".navbar .dropdown-menu" ).mouseleave(function() {
+
+ $( ".navbar .dropdown-menu" ).mouseleave(function() {
         $(this).removeClass("show");  
       });
-   
