@@ -1,22 +1,10 @@
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+// Get the button, and when the user clicks on it, execute myFunction
+document.getElementById("myBtn").onclick = function() {myFunction()};
 
-// Get the header
-var header = document.getElementById("myHeader");
-
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
 function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  } 
+  document.getElementById("myDropdown").classList.toggle("show");
 }
 
- $( ".navbar .dropdown-menu" ).mouseleave(function() {
-        $(this).removeClass("show");  
-      });
+
